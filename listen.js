@@ -1,5 +1,6 @@
 /*MOdule*/
 const express = require("express");
+var cors = require("cors");
 
 /*Mes Gestions*/
 const gestion_accueil = require("./gestion_accueil");
@@ -17,8 +18,11 @@ listen.use(express.urlencoded({ extended: true }));
 listen.use(express.json());
 
 //requete externe
-var cors = require("cors");
-listen.use(cors(/*corsOptions*/));
+var corsOptions = {
+  origin: 'https://ballejos-lilian.fr',
+  optionsSuccessStatus: 200 // For legacy browser support
+}
+listen.use(cors(corsOptions));
 
 /*Requete accueil*/
 listen.get("/recup-data-accueil", function (req, res) {
