@@ -1,15 +1,15 @@
-const https = require('https')
-//const https = require('http')
-const listen = require('./listen');
+/*const https = require('https')*/
+const https = require('http')
+const listen = require('./lib/listen');
 const fs = require('fs');
 
 const chemin_certif = '/etc/letsencrypt/live/ballejos-lilian.fr/';
 
-const options = {
+/*const options = {
   key: fs.readFileSync(chemin_certif + 'privkey.pem'),
   cert: fs.readFileSync(chemin_certif + 'cert.pem'),
   ca: fs.readFileSync(chemin_certif + 'chain.pem')
-};
+};*/
 
 const normalizePort = val => {
   const port = parseInt(val, 10);
@@ -23,7 +23,7 @@ const normalizePort = val => {
   return false;
 };
 
-const port = normalizePort(process.env.PORT || '8443');
+const port = normalizePort(process.env.PORT || '3128');
 listen.set('port', port);
 
 const errorHandler = error => {
@@ -46,7 +46,7 @@ const errorHandler = error => {
   }
 };
 
-const server = https.createServer(options, listen);
+const server = https.createServer(/*options,*/ listen);
 
 server.on('error', errorHandler);
 server.on('listening', () => {
