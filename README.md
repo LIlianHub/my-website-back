@@ -1,4 +1,9 @@
 # Code de la partie back de mon Site Web (API)
+
+## Periode de création
+
+- Octobre 2022 à Novembre 2022
+
 ## Contenu
 
 * Gestion d'envoie de mail avec nodemailer
