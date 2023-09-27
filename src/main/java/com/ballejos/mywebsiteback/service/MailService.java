@@ -1,7 +1,7 @@
 package com.ballejos.mywebsiteback.service;
 
 // Importing required classes
-import com.ballejos.mywebsiteback.entity.ReceiveRequestMail;
+import com.ballejos.mywebsiteback.entity.ReceivePostMail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -19,7 +19,7 @@ public class MailService {
     @Value("${spring.mail.username}")
     private String sender;
 
-    public String sendSimpleMail(ReceiveRequestMail details) {
+    public String sendSimpleMail(ReceivePostMail details) {
         try {
             SimpleMailMessage mailMessage = new SimpleMailMessage();
             mailMessage.setFrom(sender);

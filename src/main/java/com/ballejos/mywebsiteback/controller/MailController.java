@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import com.ballejos.mywebsiteback.entity.ReceiveRequestMail;
+import com.ballejos.mywebsiteback.entity.ReceivePostMail;
 
 
 @RestController
@@ -16,7 +16,7 @@ public class MailController {
     private MailService mailService;
 
     @PostMapping("/sendEmail")
-    public String sendEmail(@RequestBody ReceiveRequestMail receivedRequest){
+    public String sendEmail(@RequestBody ReceivePostMail receivedRequest){
         return mailService.sendSimpleMail(receivedRequest);
     }
 
