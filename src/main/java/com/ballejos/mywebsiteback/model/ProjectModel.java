@@ -3,21 +3,19 @@ package com.ballejos.mywebsiteback.model;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.GeneratedValue;
-import lombok.Data;
 import jakarta.persistence.Table;
+import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "posts")
-public class AnswerGetHomeDataModel {
+@Table(name = "projects")
+public class ProjectModel {
 
     @Id
     private Long id;
 
-    @Column(name = "id_str")
-    private String id_str;
+    @Column(name = "idStr")
+    private String idStr;
 
     @Column(name = "img")
     private String img;
