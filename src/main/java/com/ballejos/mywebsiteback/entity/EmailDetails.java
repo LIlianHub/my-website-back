@@ -9,7 +9,7 @@ import lombok.RequiredArgsConstructor;
 @AllArgsConstructor
 @RequiredArgsConstructor
 public class EmailDetails {
-    private String recipient;
+    private String userEmail;
     private String msgBody;
     private String subject;
 }

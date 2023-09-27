@@ -1,13 +1,14 @@
 package com.ballejos.mywebsiteback.service;
 
 // Importing required classes
-import com.ballejos.mywebsiteback.entity.EmailDetails;
+import com.ballejos.mywebsiteback.entity.ReceiveRequestMail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
-
+import org.springframework.web.server.ResponseStatusException;
 
 @Service
 public class MailService {
@@ -18,24 +19,24 @@ public class MailService {
     @Value("${spring.mail.username}")
     private String sender;
 
-    public boolean sendSimpleMail(EmailDetails details) {
+    public String sendSimpleMail(ReceiveRequestMail details) {
         try {
-            System.out.println("TESTTTTTT");
             SimpleMailMessage mailMessage = new SimpleMailMessage();
             mailMessage.setFrom(sender);
-            mailMessage.setTo(details.getRecipient());
+            mailMessage.setTo(details.getUserEmail());
             mailMessage.setText(details.getMsgBody());
             mailMessage.setSubject(details.getSubject());
 
 
             javaMailSender.send(mailMessage);
-            return true;
+            return "Mail sent successfuly";
         }
 
 
         catch (Exception e) {
-            System.out.println(e);
-            return false;
+            throw new ResponseStatusException(
+                    HttpStatus.INTERNAL_SERVER_ERROR,
+                    "SendMailError: Something went wrong please try later");
         }
     }
 }
