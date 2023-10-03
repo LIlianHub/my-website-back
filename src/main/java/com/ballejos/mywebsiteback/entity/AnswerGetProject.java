@@ -8,8 +8,8 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @Getter
 public class AnswerGetProject {
-       private String id;
-       private String img;
-       private String titre;
-       private String contenu;
+    private String id;
+    private String img;
+    private String titre;
+    private String contenu;
 }

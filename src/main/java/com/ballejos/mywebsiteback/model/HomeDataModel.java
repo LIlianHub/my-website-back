@@ -2,8 +2,8 @@ package com.ballejos.mywebsiteback.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import lombok.Data;
 import jakarta.persistence.Table;
+import lombok.Data;
 
 @Data
 @Entity

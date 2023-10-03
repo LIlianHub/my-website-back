@@ -10,7 +10,7 @@ import java.util.List;
 @Component
 public class ProjectMapper {
 
-    public AnswerGetProject toAnswerGetProject(ProjectModel projectModel){
+    public AnswerGetProject toAnswerGetProject(ProjectModel projectModel) {
         return new AnswerGetProject(
                 projectModel.getIdStr(),
                 projectModel.getImg(),
@@ -18,7 +18,7 @@ public class ProjectMapper {
                 projectModel.getContenu());
     }
 
-    public List<AnswerGetProject> toAnswerGetProjects(List<ProjectModel> projectModels){
+    public List<AnswerGetProject> toAnswerGetProjects(List<ProjectModel> projectModels) {
         List<AnswerGetProject> answerGetProjects = new ArrayList<>();
         for (ProjectModel projectModel : projectModels) {
             answerGetProjects.add(toAnswerGetProject(projectModel));

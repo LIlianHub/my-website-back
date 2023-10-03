@@ -1,6 +1,7 @@
 package com.ballejos.mywebsiteback.service;
 
 // Importing required classes
+
 import com.ballejos.mywebsiteback.entity.ReceivePostMail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -30,10 +31,7 @@ public class MailService {
 
             javaMailSender.send(mailMessage);
             return "Mail sent successfuly";
-        }
-
-
-        catch (Exception e) {
+        } catch (Exception e) {
             throw new ResponseStatusException(
                     HttpStatus.INTERNAL_SERVER_ERROR,
                     "SendMailError: Something went wrong please try later");

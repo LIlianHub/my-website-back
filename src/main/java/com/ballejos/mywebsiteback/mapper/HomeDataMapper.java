@@ -10,11 +10,11 @@ import java.util.List;
 @Component
 public class HomeDataMapper {
 
-    public AnswerGetHomeData toAnswerGetHomeData(HomeDataModel homeDataModel){
+    public AnswerGetHomeData toAnswerGetHomeData(HomeDataModel homeDataModel) {
         return new AnswerGetHomeData(homeDataModel.getContenu());
     }
 
-    public List<AnswerGetHomeData> toAnswerGetHomeDatas(List<HomeDataModel> homeDataModels){
+    public List<AnswerGetHomeData> toAnswerGetHomeDatas(List<HomeDataModel> homeDataModels) {
         List<AnswerGetHomeData> answerGetHomeDatas = new ArrayList<>();
         for (HomeDataModel homeDataModel : homeDataModels) {
             answerGetHomeDatas.add(toAnswerGetHomeData(homeDataModel));
