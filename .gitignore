@@ -37,3 +37,7 @@ out/
 .vscode/
 
 env.properties
+
+### DB ###
+db_back.sql.mv.db
+db_back.sql.trace.db

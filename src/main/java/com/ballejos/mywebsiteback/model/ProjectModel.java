@@ -12,18 +12,19 @@ import lombok.Data;
 public class ProjectModel {
 
     @Id
+    @Column(name = "ID")
     private Long id;
 
-    @Column(name = "idStr")
+    @Column(name = "ID_STR")
     private String idStr;
 
-    @Column(name = "img")
+    @Column(name = "IMG")
     private String img;
 
-    @Column(name = "titre")
+    @Column(name = "TITRE")
     private String titre;
 
-    @Column(name = "contenu")
+    @Column(name = "CONTENU")
     private String contenu;
 
 }
