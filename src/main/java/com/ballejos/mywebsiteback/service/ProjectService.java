@@ -24,8 +24,8 @@ public class ProjectService {
         return projectMapper.toAnswerGetProjects(
                 RepositoryUtils.checkIfNotEmpty(projectRepo.findAll(),
                         new ResponseStatusException(
-                                HttpStatus.INTERNAL_SERVER_ERROR,
-                                "ProjectError: Something went wrong please try later")
+                                HttpStatus.NOT_FOUND,
+                                "ProjectError: No project found, Please try again later.")
                 )
         );
     }
@@ -34,8 +34,8 @@ public class ProjectService {
         return projectMapper.toAnswerGetProject(
                 projectRepo.findByIdStr(id_str).orElseThrow(
                         () -> new ResponseStatusException(
-                                HttpStatus.INTERNAL_SERVER_ERROR,
-                                "ProjectError: Something went wrong please try later")
+                                HttpStatus.NOT_FOUND,
+                                "ProjectError: No project found with id " + id_str + ", Please try again later.")
                 )
         );
     }

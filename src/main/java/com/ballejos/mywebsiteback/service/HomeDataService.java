@@ -23,8 +23,8 @@ public class HomeDataService {
         return homeDataMapper.toAnswerGetHomeDatas(
                 RepositoryUtils.checkIfNotEmpty(homeDataRepo.findAll(),
                         new ResponseStatusException(
-                                HttpStatus.INTERNAL_SERVER_ERROR,
-                                "HomeDataError: Something went wrong please try later")
+                                HttpStatus.NOT_FOUND,
+                                "HomeDataError: No home data found, Please try again later.")
                 )
         );
     }
