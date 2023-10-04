@@ -1,7 +1,5 @@
 package com.ballejos.mywebsiteback.service;
 
-// Importing required classes
-
 import com.ballejos.mywebsiteback.entity.ReceivePostMail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -27,7 +25,6 @@ public class MailService {
             mailMessage.setTo(details.getUserEmail());
             mailMessage.setText(details.getMsgBody());
             mailMessage.setSubject(details.getSubject());
-
 
             javaMailSender.send(mailMessage);
             return "Mail sent successfuly";
