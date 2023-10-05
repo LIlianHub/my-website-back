@@ -1,5 +1,6 @@
 package com.ballejos.mywebsiteback.controller;
 
+import com.ballejos.mywebsiteback.entity.AnswerPostMail;
 import com.ballejos.mywebsiteback.entity.ReceivePostMail;
 import com.ballejos.mywebsiteback.service.MailService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ public class MailController {
     private MailService mailService;
 
     @PostMapping("/sendEmail")
-    public String sendEmail(@RequestBody ReceivePostMail receivedRequest) {
+    public AnswerPostMail sendEmail(@RequestBody ReceivePostMail receivedRequest) {
         return mailService.sendSimpleMail(receivedRequest);
     }
 

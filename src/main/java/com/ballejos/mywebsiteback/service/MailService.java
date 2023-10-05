@@ -8,6 +8,7 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
+import com.ballejos.mywebsiteback.entity.AnswerPostMail;
 
 @Service
 public class MailService {
@@ -18,19 +19,18 @@ public class MailService {
     @Value("${spring.mail.username}")
     private String sender;
 
-    public String sendSimpleMail(ReceivePostMail details) {
+    public AnswerPostMail sendSimpleMail(ReceivePostMail details) {
         try {
             SimpleMailMessage mailMessage = new SimpleMailMessage();
-            mailMessage.setFrom(sender);
-            mailMessage.setTo(details.getUserEmail());
-            mailMessage.setText(details.getMsgBody());
+            mailMessage.setTo("lilian.ballejos@hotmail.fr");
             mailMessage.setSubject(details.getSubject());
+            mailMessage.setFrom(sender);
+            mailMessage.setText("From: " + details.getUserEmail() + "\n" + details.getMsgBody());
 
             javaMailSender.send(mailMessage);
-            return "Mail sent successfuly";
+            return new AnswerPostMail("Mail sent successfuly");
         } catch (Exception e) {
-            throw new ResponseStatusException(
-                    HttpStatus.INTERNAL_SERVER_ERROR,
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR,
                     "SendMailError: Something went wrong please try later");
         }
     }
