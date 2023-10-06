@@ -39,38 +39,36 @@ CREATE TABLE IF NOT EXISTS `PROJECTS`
     );
 
 INSERT INTO `HOME_DATAS` (`CONTENU`)
-VALUES ('<h1>Bienvenue sur mon site Web</h1>
-<h2>Qui suis-je ? ?</h2>
+VALUES ('<h1>Bienvenue sur mon site web !</h1>
+
+<h2>Présentation</h2>
 <hr>
+
 <div class="boite-img-txt">
-    <div class="sous-boite-img-txt-img">
-        <img src="assets/img/moi-acceuil.png" alt="photo de moi">
-    </div>
-    <div class="sous-boite-img-txt-txt">
-        <p>
-            Je m''appelle BALLEJOS Lilian et je suis étudiant en seconde année d''école d''Ingénieurs informatique à <a
-                href="https://www.isima.fr/" target="new">ISIMA INP</a>.Passionné par l''informatique depuis tout jeune,
-            je compte travailler dans ce domaine dans le futur.
-            Si mon parcours vous intéresse, vous pouvez trouver mon cv sur ce <a
-                href="https://ballejos-lilian.fr:3000/cv/fr.pdf" target="new">lien</a>.
-        </p>
-
-    </div>
+	<div class="sous-boite-img-txt-img">
+	        <img src="assets/img/moi-accueil.png" alt="photo de moi">
+	</div>
+	<div class="sous-boite-img-txt-txt">
+	<p>
+	Je m''appelle BALLEJOS Lilian et je suis étudiant en troisième année d''école d''ingénieurs en informatique à l''<a href="https://www.isima.fr/" target="new">ISIMA INP</a>. Passionné par l''informatique depuis mon plus jeune âge, je compte travailler dans ce domaine à l''avenir. Si mon parcours vous intéresse, vous pouvez trouver mon CV en suivant ce <a href="https://ballejos-lilian.fr/assets/cv/fr.pdf" target="new">lien</a>.
+	</p>
+	</div>
 </div>
-<h2>Ma spécialité</h2>
-<hr>
-<p>J''ai choisis de me spécialiser dans le Génie Logiciel cette année</p>
-<h2>Stage</h2>
-<hr>
-<p>Je recherche activement un stage d''une durée de 5 mois</p>');
 
-INSERT INTO `HOME_DATAS` (`CONTENU`)
-VALUES ('<h2>Le Site Web</h2>
-                                                      <hr>
-                                                      <p>Ce site web est developpé durant mon temps libre et est donc voué à évoluer dans le temps</p>
-                                                      <h2>Travaux en cours</h2>
-                                                      <hr>
-                                                      <p>Je suis dans une période où je modifie beaucoup ce site certaines fonctionnalités sont possiblement incomplètes voir non fonctionnelles</p>');
+<h2>Spécialité</h2>
+<hr>
+
+<p>
+Je suis en filière "<B>Génie Logiciel et systèmes informatiques</B>" de mon école. J''ai développé durant mes études grâce à des projets personnels, académiques et en entreprise de nombreuses connaissances en développement logiciel. J''explore un large éventail de langages et de frameworks afin de couvrir un large spectre de compétences très utiles en développement full stack et logiciel. Pour en savoir plus, vous pouvez consulter mon CV disponible dans l''onglet <a routerlink="/cv/fr">CV</a>.
+
+</p>
+
+<h2>Me contacter</h2>
+<hr>
+
+<p>
+Si vous avez des idées de projet que vous souhaitez me proposer, vous pouvez me contacter via la page <a routerlink="/cv/fr">Me contacter</a>.
+</p>');
 
 INSERT INTO PROJECTS (`CONTENU`, `ID_STR`, `IMG`, `TITRE`)
 VALUES ('<div class="contenu">
