@@ -59,7 +59,7 @@ VALUES ('<h1>Bienvenue sur mon site web !</h1>
 <hr>
 
 <p>
-Je suis en filière "<B>Génie Logiciel et systèmes informatiques</B>" de mon école. J''ai développé durant mes études grâce à des projets personnels, académiques et en entreprise de nombreuses connaissances en développement logiciel. J''explore un large éventail de langages et de frameworks afin de couvrir un large spectre de compétences très utiles en développement full stack et logiciel. Pour en savoir plus, vous pouvez consulter mon CV disponible dans l''onglet <a routerlink="/cv/fr">CV</a>.
+Je suis dans la filière "<B>Génie Logiciel et systèmes informatiques</B>" de mon école. J''ai développé durant mes études grâce à des projets personnels, académiques et en entreprise de nombreuses connaissances en développement logiciel. J''essaye au maximum d''étendre ma maitrise des différents langages informatiques et frameworks existant afin de couvrir un large spectre de compétences très utiles en développement full stack et logiciel. Pour en savoir plus, vous pouvez consulter mon CV disponible dans l''onglet <a routerlink="/cv/fr">CV</a>.
 
 </p>
 
@@ -67,7 +67,7 @@ Je suis en filière "<B>Génie Logiciel et systèmes informatiques</B>" de mon �
 <hr>
 
 <p>
-Si vous avez des idées de projet que vous souhaitez me proposer, vous pouvez me contacter via la page <a routerlink="/cv/fr">Me contacter</a>.
+Si vous avez des idées de projet que vous souhaitez me proposer, vous pouvez me contacter via la page <a routerlink="/contact">Me contacter</a>.
 </p>');
 
 INSERT INTO PROJECTS (`CONTENU`, `ID_STR`, `IMG`, `TITRE`)
