@@ -25,7 +25,8 @@ public class MailService {
             mailMessage.setTo("lilian.ballejos@hotmail.fr");
             mailMessage.setSubject(details.getSubject());
             mailMessage.setFrom(sender);
-            mailMessage.setText("From: " + details.getUserEmail() + "\n" + details.getMsgBody());
+            mailMessage.setText("From: " + details.getUserEmail() + "\n" + details.getMsgBody()
+                    + "\nAutmatic message please do not reply");
 
             javaMailSender.send(mailMessage);
             return new AnswerPostMail("Mail sent successfuly");
