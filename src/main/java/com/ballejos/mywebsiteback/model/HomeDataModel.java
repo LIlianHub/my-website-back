@@ -15,7 +15,7 @@ public class HomeDataModel {
     @Column(name = "ID")
     private Long id;
 
-    @Column(name = "CONTENU")
-    private String contenu;
+    @Column(name = "TARGET_FILE")
+    private String targetFile;
 
 }

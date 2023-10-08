@@ -16,6 +16,10 @@ repositories {
 }
 
 dependencies {
+	implementation 'org.commonmark:commonmark:0.17.2'
+
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 

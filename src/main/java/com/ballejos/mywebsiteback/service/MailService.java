@@ -1,5 +1,6 @@
 package com.ballejos.mywebsiteback.service;
 
+import com.ballejos.mywebsiteback.entity.AnswerPostMail;
 import com.ballejos.mywebsiteback.entity.ReceivePostMail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -8,7 +9,6 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-import com.ballejos.mywebsiteback.entity.AnswerPostMail;
 
 @Service
 public class MailService {
