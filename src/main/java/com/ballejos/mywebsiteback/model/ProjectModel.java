@@ -23,8 +23,4 @@ public class ProjectModel {
 
     @Column(name = "TITRE")
     private String titre;
-
-    @Column(name = "CONTENU")
-    private String contenu;
-
 }

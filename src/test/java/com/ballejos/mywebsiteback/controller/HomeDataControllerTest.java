@@ -20,8 +20,6 @@ public class HomeDataControllerTest {
     private MockMvc mockMvc;
 
     @Test
-    //test that size of the json is not null
-
     public void testGetHomeData() throws Exception {
 
         mockMvc.perform(get("/getHomeData"))
