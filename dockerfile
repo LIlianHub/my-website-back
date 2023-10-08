@@ -4,6 +4,7 @@ EXPOSE 8082
 
 COPY env.properties /app/
 COPY application.properties /app/
+COPY content/ /app/content
 
 COPY my-website-back-0.0.1-SNAPSHOT.jar /app.jar 
 
