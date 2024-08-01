@@ -26,10 +26,10 @@ public class MailService {
             mailMessage.setSubject(details.getSubject());
             mailMessage.setFrom(sender);
             mailMessage.setText("From: " + details.getUserEmail() + "\n" + details.getMsgBody()
-                    + "\nAutmatic message please do not reply");
+                    + "\nAutomatic message please do not reply");
 
             javaMailSender.send(mailMessage);
-            return new AnswerPostMail("Mail sent successfuly");
+            return new AnswerPostMail("Mail sent successfully");
         } catch (Exception e) {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR,
                     "SendMailError: Something went wrong please try later");
